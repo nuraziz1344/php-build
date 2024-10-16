@@ -3,6 +3,7 @@
 --with-zlib
 --with-zlib-dir=/usr
 --with-bz2
+--enable-intl
 --with-openssl
 --enable-soap
 --enable-xmlreader
@@ -11,7 +12,6 @@
 --enable-cgi
 --with-curl=/usr
 --with-tidy
---with-xmlrpc
 --enable-sysvsem
 --enable-sysvshm
 --enable-shmop
@@ -27,5 +27,3 @@
 --enable-phpdbg
 --disable-opcache
 --disable-zend-signals
---with-pgsql=/usr
---with-pdo-pgsql=/usr
