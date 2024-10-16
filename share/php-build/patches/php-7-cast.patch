@@ -1,0 +1,11 @@
+--- a/main/streams/cast.c
++++ b/main/streams/cast.c
+@@ -136,7 +136,7 @@
+ static COOKIE_IO_FUNCTIONS_T stream_cookie_functions =
+ {
+ 	stream_cookie_reader, stream_cookie_writer,
+-	stream_cookie_seeker, stream_cookie_closer
++	(cookie_seek_function_t *)stream_cookie_seeker, stream_cookie_closer
+ };
+ #else
+ /* TODO: use socketpair() to emulate fopencookie, as suggested by Hartmut ? */
