@@ -133,8 +133,8 @@ fi
 TMP=$PHP_BUILD_TMPDIR
 
 # This file gets copied to `$PREFIX/etc/php.ini` once the build is complete.
-# This is by default the PHP tarball's `php.ini-production`.
-PHP_DEFAULT_INI="php.ini-production"
+# This is by default the PHP tarball's `php.ini-development`.
+PHP_DEFAULT_INI="php.ini-development"
 
 # Initialize the builtin definition path.
 [ -z "$PHP_BUILD_DEFINITION_PATH" ] && PHP_BUILD_DEFINITION_PATH="$PHP_BUILD_ROOT/share/php-build/definitions"
