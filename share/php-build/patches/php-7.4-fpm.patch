@@ -1,11 +1,11 @@
---- /tmp/php-build/source/7.4.33/sapi/fpm/fpm/fpm_conf.c.new	2025-03-21 23:26:33.668843885 +0700
-+++ /tmp/php-build/source/7.4.33/sapi/fpm/fpm/fpm_conf.c	2022-10-31 17:36:05.000000000 +0700
+--- a/sapi/fpm/fpm/fpm_conf.c
++++ b/sapi/fpm/fpm/fpm_conf.c
 @@ -1439,7 +1439,7 @@
  	char *err = NULL;
  	void *config;
  
--	if (Z_STRVAL_P(key) == NULL || Z_STRVAL_P(value) == NULL || *Z_STRVAL_P(key) == '\0') {
-+	if (!Z_STRVAL_P(key) || !Z_STRVAL_P(value) || !*Z_STRVAL_P(key)) {
+-	if (!Z_STRVAL_P(key) || !Z_STRVAL_P(value) || !*Z_STRVAL_P(key)) {
++	if (Z_STRVAL_P(key) == NULL || Z_STRVAL_P(value) == NULL || *Z_STRVAL_P(key) == '\0') {
  		zlog(ZLOG_ERROR, "[%s:%d] Misspelled  array ?", ini_filename, ini_lineno);
  		*error = 1;
  		return;
